@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
           setState(() {
             double fallspeed = (((_userAccelerometerValuesBefore![0] * _userAccelerometerValuesBefore![0]) - (event.x * event.x)) + ((_userAccelerometerValuesBefore![1] * _userAccelerometerValuesBefore![1]) - (event.y * event.y)) + ((_userAccelerometerValuesBefore![2] * _userAccelerometerValuesBefore![2]) - (event.z * event.z)));
             print(fallspeed);
-            if ((fallspeed >= 90 || fallspeed <= -90) && !show) {
+            if ((fallspeed >= 110 || fallspeed <= -110) && !show) {
               getLocation().then((value) {
                 print("tomber");
                 print("Location = ${value.latitude},${value.longitude}");
